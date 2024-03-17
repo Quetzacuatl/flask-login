@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{{ msg }}
+
+
+{% block content  %}
+
+
+    <br>
+    <h1>Login to your account</h1>
+    <form action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="email" name="email">
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+        <button type="submit">Submit</button>
+    </form>
+
+                <!-- Link for signin -->
+                <span>Not yet an account ? </span>
+                <a href="/signup">Register</a>
+
+                
+
+{% endblock %}
+

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content  %}
+
+{% if current_user.is_authenticated %}
+
+<!-- {{ msg }} -->
+
+    <h1>MY HOMEPAGE</h1>
+    <p>You are logged in</p>
+
+        <!-- Show current users email -->
+        <b>Current user</b>: {{current_user.email}}
+        <!-- Current users roles -->
+        | <b>Role</b>: {% for role in current_user.roles%}
+                        {{role.name}}
+               {% endfor %} <br><br>
+
+{% else %}
+
+    <h1>YOU ARE NOT LOGGED IN</h1>
+
+{%  endif %}
+
+{% endblock  %}
